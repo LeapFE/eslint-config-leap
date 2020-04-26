@@ -2,7 +2,6 @@ const extendsRules = [
   "./rules/best-practices",
   "./rules/imports",
   "./rules/node",
-  "./rules/prettier",
   "./rules/react",
   "./rules/react-hooks",
   "./rules/style",
@@ -10,6 +9,7 @@ const extendsRules = [
   "./rules/variable",
   "./rules/errors",
   "./rules/es6",
+  "./rules/prettier",
 ].map(require.resolve);
 
 module.exports = {
