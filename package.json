@@ -4,8 +4,7 @@
   "description": "Leap's TypeScript and React ESLint config",
   "main": "index.js",
   "scripts": {
-    "prepublish": "(in-install || eslint-find-rules --unused) && not-in-publish && safe-publish-latest",
-    "format": "prettier --write /rules",
+    "format": "prettier --write ./rules",
     "gen-rule": "node generateRule.js"
   },
   "repository": {
