@@ -74,9 +74,10 @@ module.exports = {
     // https://eslint.org/docs/rules/max-len
     "max-len": [
       "error",
-      100,
-      2,
       {
+        code: 100,
+        tabWidth: 2,
+        comments: 120,
         ignoreUrls: true,
         ignoreComments: false,
         ignoreRegExpLiterals: true,
@@ -168,11 +169,6 @@ module.exports = {
     // require a newline around variable declaration
     // https://eslint.org/docs/rules/one-var-declaration-per-line
     "one-var-declaration-per-line": ["error", "always"],
-
-    // OVERRIDE
-    // Requires operator at the beginning of the line in multiline statements
-    // https://eslint.org/docs/rules/operator-linebreak
-    "operator-linebreak": ["error", "before", { overrides: { "=": "none" } }],
 
     // OVERRIDE
     quotes: ["error", "double"],

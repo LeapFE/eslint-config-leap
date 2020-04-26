@@ -19,11 +19,6 @@ module.exports = {
    * @see https://eslint.org/docs/rules/#ecmascript-6
    */
   rules: {
-    // OVERRIDE
-    // require parens in arrow function arguments
-    // https://eslint.org/docs/rules/arrow-parens
-    "arrow-parens": ["error", "as-needed"],
-
     // NOTE
     // OVERRIDE
     // require space before/after arrow function's arrow

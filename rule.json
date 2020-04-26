@@ -1,5 +1,4 @@
 {
-  "arrow-parens": ["error", "as-needed"],
   "arrow-spacing": ["error", { "before": true, "after": true }],
   "no-confusing-arrow": ["error", { "allowParens": true }],
   "no-duplicate-imports": ["error", { "includeExports": true }],
@@ -180,9 +179,10 @@
   "max-depth": ["off", 4],
   "max-len": [
     "error",
-    100,
-    2,
     {
+      "code": 100,
+      "tabWidth": 2,
+      "comments": 120,
       "ignoreUrls": true,
       "ignoreComments": false,
       "ignoreRegExpLiterals": true,
@@ -206,7 +206,6 @@
     { "allowAllPropertiesOnSameLine": true, "allowMultiplePropertiesPerLine": false }
   ],
   "one-var-declaration-per-line": ["error", "always"],
-  "operator-linebreak": ["error", "before", { "overrides": { "=": "none" } }],
   "quotes": ["error", "double"],
   "semi": ["error", "always"],
   "react-hooks/rules-of-hooks": ["error"],
@@ -268,6 +267,7 @@
   "array-bracket-newline": ["off"],
   "array-bracket-spacing": ["off"],
   "array-element-newline": ["off"],
+  "arrow-parens": ["off"],
   "block-spacing": ["off"],
   "brace-style": ["off"],
   "comma-spacing": ["off"],
@@ -296,6 +296,7 @@
   "no-wrap-func": ["off"],
   "nonblock-statement-body-position": ["off"],
   "object-curly-newline": ["off"],
+  "operator-linebreak": ["off"],
   "padded-blocks": ["off"],
   "quote-props": ["off"],
   "rest-spread-spacing": ["off"],
