@@ -10,4 +10,4 @@ npx install-peerdeps --dev eslint-config-leap
 ```
 
 ## Rules
-all available rules https://github.com/LeapFE/eslint-config-leap/rule.json
+all available rules https://github.com/LeapFE/eslint-config-leap/blob/master/rule.json
