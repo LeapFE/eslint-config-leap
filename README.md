@@ -11,12 +11,18 @@ using npm 5+, use this shortcut
 npx install-peerdeps --dev eslint-config-leap
 ```
 
-Then, add eslint-config-leap to the "extends" array in your .eslintrc.* file.
+Then, add eslint-config-leap to the `extends` array in your .eslintrc.* file.
+This rules include typescript rule, so you should specify `parser` and `parserOptions.project` in .eslintrc.* file.
+
 ```json
 {
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "leap"
-  ]
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  }
 }
 ```
 
