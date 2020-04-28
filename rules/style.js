@@ -8,51 +8,8 @@ module.exports = {
     // OVERRIDE
     // this option sets a specific tab width for your code
     // https://eslint.org/docs/rules/indent
-    indent: [
-      "error",
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        // MemberExpression: null,
-        FunctionDeclaration: {
-          parameters: 1,
-          body: 1,
-        },
-        FunctionExpression: {
-          parameters: 1,
-          body: 1,
-        },
-        CallExpression: {
-          arguments: 1,
-        },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-        // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
-        ignoredNodes: [
-          "JSXElement",
-          "JSXElement > *",
-          "JSXAttribute",
-          "JSXIdentifier",
-          "JSXNamespacedName",
-          "JSXMemberExpression",
-          "JSXSpreadAttribute",
-          "JSXExpressionContainer",
-          "JSXOpeningElement",
-          "JSXClosingElement",
-          "JSXFragment",
-          "JSXOpeningFragment",
-          "JSXClosingFragment",
-          "JSXText",
-          "JSXEmptyExpression",
-          "JSXSpreadChild",
-        ],
-        ignoreComments: false,
-      },
-    ],
+    // @see ./typescript.js `@typescript-eslint/indent`
+    indent: "off",
 
     // OVERRIDE
     // specify whether double or single quotes should be used in JSX attributes
@@ -104,7 +61,8 @@ module.exports = {
 
     // OVERRIDE
     // disallow use of the Array constructor
-    "no-array-constructor": "warn",
+    // @see ./typescript.js `@typescript-eslint/no-array-constructor`
+    "no-array-constructor": "off",
 
     // OVERRIDE
     // disallow continue statements
@@ -171,10 +129,12 @@ module.exports = {
     "one-var-declaration-per-line": ["error", "always"],
 
     // OVERRIDE
-    quotes: ["error", "double"],
+    // see ./typescript.js `@typescript-eslint/quotes`
+    quotes: "off",
 
     // OVERRIDE
     // require or disallow use of semicolons instead of ASI
-    semi: ["error", "always"],
+    // see ./typescript.js @typescript-eslint/semi
+    semi: "off",
   },
 };

@@ -32,12 +32,8 @@ module.exports = {
     // OVERRIDE
     // disallow empty functions, except for standalone funcs/arrows
     // https://eslint.org/docs/rules/no-empty-function
-    "no-empty-function": [
-      "error",
-      {
-        allow: ["arrowFunctions", "functions", "methods"],
-      },
-    ],
+    // @see ./typescript `@typescript-eslint/no-empty-function`
+    "no-empty-function": "off",
 
     // OVERRIDE
     // disallow use of eval()
@@ -120,14 +116,8 @@ module.exports = {
 
     // OVERRIDE
     // disallow usage of expressions in statement position
-    "no-unused-expressions": [
-      "error",
-      {
-        allowShortCircuit: false,
-        allowTernary: false,
-        allowTaggedTemplates: false,
-      },
-    ],
+    // @see ./typescript.js `@typescript-eslint/no-unused-expressions`
+    "no-unused-expressions": "off",
 
     // OVERRIDE
     // require immediate function invocation to be wrapped in parentheses

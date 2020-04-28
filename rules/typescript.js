@@ -35,98 +35,127 @@ module.exports = {
       },
     ],
 
+    // @deprecated
     "@typescript-eslint/ban-ts-ignore": "off",
 
-    "@typescript-eslint/class-name-casing": "off",
+    "@typescript-eslint/class-name-casing": ["error", { allowUnderscorePrefix: true }],
 
+    // @deprecated
     "@typescript-eslint/interface-name-prefix": "off",
-
-    // Enforce consistent brace style for blocks
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.md
-    "@typescript-eslint/brace-style": "off",
-
-    // Enforces consistent spacing before and after commas
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
-    "@typescript-eslint/comma-spacing": "off",
-
-    // Enforce default parameters to be last
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/default-param-last.md
-    "@typescript-eslint/default-param-last": "off",
-
-    // enforce dot notation whenever possible
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
-    "@typescript-eslint/dot-notation": "off",
-
-    // Require or disallow spacing between function identifiers and their invocations
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.md
-    "@typescript-eslint/func-call-spacing": "off",
 
     // Enforce consistent indentation
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
-    "@typescript-eslint/indent": "off",
-
-    // require or disallow initialization in variable declarations
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/init-declarations.md
-    "@typescript-eslint/init-declarations": "off",
-
-    // Enforce consistent spacing before and after keywords
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/keyword-spacing.md
-    "@typescript-eslint/keyword-spacing": "off",
+    "@typescript-eslint/indent": [
+      "error",
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        // MemberExpression: null,
+        FunctionDeclaration: {
+          parameters: 1,
+          body: 1,
+        },
+        FunctionExpression: {
+          parameters: 1,
+          body: 1,
+        },
+        CallExpression: {
+          arguments: 1,
+        },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+        // list derived from https://github.com/benjamn/ast-types/blob/HEAD/def/jsx.js
+        ignoredNodes: [
+          "JSXElement",
+          "JSXElement > *",
+          "JSXAttribute",
+          "JSXIdentifier",
+          "JSXNamespacedName",
+          "JSXMemberExpression",
+          "JSXSpreadAttribute",
+          "JSXExpressionContainer",
+          "JSXOpeningElement",
+          "JSXClosingElement",
+          "JSXFragment",
+          "JSXOpeningFragment",
+          "JSXClosingFragment",
+          "JSXText",
+          "JSXEmptyExpression",
+          "JSXSpreadChild",
+        ],
+        ignoreComments: false,
+      },
+    ],
 
     // Disallow generic Array constructors
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
-    "@typescript-eslint/no-array-constructor": "off",
-
-    // Disallow duplicate class members
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
-    "@typescript-eslint/no-dupe-class-members": "off",
+    "@typescript-eslint/no-array-constructor": "warn",
 
     // Disallow empty functions
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
-    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      {
+        allow: ["arrowFunctions", "functions", "methods"],
+      },
+    ],
 
     // 	Disallow unnecessary parentheses
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
-    "@typescript-eslint/no-extra-parens": "off",
-
-    // Disallow unnecessary semicolon
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
-    "@typescript-eslint/no-extra-semi": "off",
-
-    // Disallow magic numbers
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
-    "@typescript-eslint/no-magic-numbers": "off",
+    "@typescript-eslint/no-extra-parens": [
+      "off",
+      "all",
+      {
+        conditionalAssign: true,
+        nestedBinaryExpressions: false,
+        returnAssign: false,
+        ignoreJSX: "all", // delegate to eslint-plugin-react
+        enforceForArrowConditionals: false,
+      },
+    ],
 
     // Disallow unused expressions
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
-    "@typescript-eslint/no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": [
+      "error",
+      {
+        allowShortCircuit: false,
+        allowTernary: false,
+        allowTaggedTemplates: false,
+      },
+    ],
 
     // 	Disallow unused variables
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        args: "all",
+        ignoreRestSiblings: true,
+        argsIgnorePattern: "^_",
+        caughtErrors: "all",
+        caughtErrorsIgnorePattern: "^ignore",
+      },
+    ],
 
     // Disallow the use of variables before they are defined
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
-    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { functions: true, classes: true, variables: true },
+    ],
 
     // Enforce the consistent use of either backticks, double, or single quotes
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
-    "@typescript-eslint/quotes": "off",
-
-    // Disallow async functions which have no await expression
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
-    "@typescript-eslint/require-await": "off",
-
-    // Enforces consistent returning of awaited values
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
-    "@typescript-eslint/return-await": "off",
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md
+    "@typescript-eslint/quotes": ["error", "double"],
 
     // Require or disallow semicolons instead of ASI
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
-    "@typescript-eslint/semi": "off",
-
-    // Enforces consistent spacing before function parenthesis
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
-    "@typescript-eslint/space-before-function-paren": "off",
+    "@typescript-eslint/semi": ["error", "always"],
   },
 };
