@@ -7,12 +7,12 @@ module.exports = {
   ],
 
   rules: {
-    // CHECK
+    // OVERRIDE
     // ensure imports point to files/modules that can be resolved
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
     "@typescript-eslint/camelcase": "off",
 
-    // CHECK
+    // OVERRIDE
     // warn usage of the any type
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
     "@typescript-eslint/no-explicit-any": [
@@ -22,7 +22,7 @@ module.exports = {
       },
     ],
 
-    // CHECK
+    // OVERRIDE
     // Require explicit return types on functions and class methods
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
     "@typescript-eslint/explicit-function-return-type": "off",
