@@ -25,8 +25,24 @@ module.exports = {
     // OVERRIDE
     // Require explicit return types on functions and class methods
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        // if true, only functions which are part of a declaration will be checked
+        allowExpressions: true,
+        // if true, type annotations are also allowed on the variable of a function expression rather than on the function directly
+        allowTypedFunctionExpressions: true,
+        // if true, functions immediately returning another function expression will not be checked
+        allowHigherOrderFunctions: true,
+        // if true, arrow functions immediately returning a `as const` value will not be checked
+        allowDirectConstAssertionInArrowFunctions: true,
+        // if true, concise arrow functions that start with the void keyword will not be checked
+        allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+      },
+    ],
 
+    // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md
     "@typescript-eslint/no-inferrable-types": [
       "error",
       {
@@ -35,8 +51,13 @@ module.exports = {
       },
     ],
 
-    // @deprecated
-    "@typescript-eslint/ban-ts-ignore": "off",
+    // Bans @ts-<directive> comments from being used or requires descriptions after directive
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
+    "@typescript-eslint/ban-ts-comment": "error",
+
+    // Bans specific types from being used
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
+    "@typescript-eslint/ban-types": "error",
 
     "@typescript-eslint/class-name-casing": ["error", { allowUnderscorePrefix: true }],
 

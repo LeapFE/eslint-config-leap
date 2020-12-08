@@ -19,7 +19,7 @@ module.exports = {
     // NOTE
     // OVERRIDE
     // disallow use of console
-    "no-console": ["error", { allow: ["warn", "error"] }],
+    "no-console": ["error", { allow: ["warn", "error", "info"] }],
 
     // OVERRIDE
     // disallow use of constant expressions in conditions

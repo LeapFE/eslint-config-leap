@@ -5,11 +5,12 @@ const extendsRules = [
   "./rules/react",
   "./rules/react-hooks",
   "./rules/style",
-  "./rules/typescript",
   "./rules/variable",
   "./rules/errors",
   "./rules/es6",
   "./rules/prettier",
+  // NOTE load typescript rules latest
+  "./rules/typescript",
 ].map(require.resolve);
 
 module.exports = {
