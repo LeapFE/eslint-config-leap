@@ -32,7 +32,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^9.0.0",
-    "husky": "^4.2.5",
     "np": "^7.0.0",
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
@@ -46,11 +45,6 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run gen-rule"
-    }
   },
   "engines": {
     "node": ">= 8"
