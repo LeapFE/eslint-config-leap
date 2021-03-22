@@ -4,8 +4,8 @@
   "description": "Leap's TypeScript and React ESLint config",
   "main": "index.js",
   "scripts": {
-    "release:pre": "np prerelease --tag=beta --yolo --no-2fa --any-branch",
-    "release:prod": "np patch --tag=latest --yolo --no-2fa --branch=master",
+    "publish:next": "np prerelease --tag=next --yolo --no-2fa --any-branch",
+    "publish:latest": "np patch --tag=latest --yolo --no-2fa --branch=master",
     "format": "prettier --write ./rules",
     "gen-rule": "node generateRule.js"
   },
