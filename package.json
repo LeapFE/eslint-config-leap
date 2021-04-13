@@ -8,7 +8,7 @@
     "release": "togo-np --tag latest --branch master",
     "format": "prettier --write ./rules",
     "gen-rule": "node generateRule.js"
-  },g
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeapFE/eslint-config-leap.git"
@@ -32,7 +32,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^9.0.0",
-    "np": "^7.0.0",
     "prettier": "^2.0.5",
     "togo-np": "^1.0.0",
     "typescript": "^3.8.3"
