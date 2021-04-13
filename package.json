@@ -1,11 +1,11 @@
 {
   "name": "eslint-config-leap",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Leap's TypeScript and React ESLint config",
   "main": "index.js",
   "scripts": {
-    "publish:next": "np prerelease --tag=next --yolo --no-2fa --any-branch",
-    "publish:latest": "np patch --tag=latest --yolo --no-2fa --branch=master",
+    "release:beta": "togo-np prerelease --tag beta --run-scripts 'eslint build' --allow-any-branch",
+    "release": "togo-np --tag latest --run-scripts 'eslint build' --branch master",
     "format": "prettier --write ./rules",
     "gen-rule": "node generateRule.js"
   },
@@ -34,6 +34,7 @@
     "fs-extra": "^9.0.0",
     "np": "^7.0.0",
     "prettier": "^2.0.5",
+    "togo-np": "^1.0.0",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
