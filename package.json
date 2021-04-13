@@ -4,11 +4,11 @@
   "description": "Leap's TypeScript and React ESLint config",
   "main": "index.js",
   "scripts": {
-    "release:beta": "togo-np prerelease --tag beta --run-scripts 'eslint build' --allow-any-branch",
-    "release": "togo-np --tag latest --run-scripts 'eslint build' --branch master",
+    "release:beta": "togo-np prerelease --tag beta --allow-any-branch",
+    "release": "togo-np --tag latest --branch master",
     "format": "prettier --write ./rules",
     "gen-rule": "node generateRule.js"
-  },
+  },g
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeapFE/eslint-config-leap.git"
