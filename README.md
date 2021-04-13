@@ -1,4 +1,4 @@
-# eslint-config-leap
+# eslint-config-leapfe
 
 > Leap specific linting rules for ESLint
 
@@ -8,7 +8,7 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+、 
 
 using npm 5+, use this shortcut
 ```shell
-npx install-peerdeps --dev eslint-config-leap
+npx install-peerdeps --dev eslint-config-leapfe
 ```
 
 Then, add eslint-config-leap to the `extends` array in your .eslintrc.* file.
