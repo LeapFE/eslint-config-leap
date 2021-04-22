@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-leapfe",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Leap's TypeScript and React ESLint config",
   "main": "index.js",
   "scripts": {
