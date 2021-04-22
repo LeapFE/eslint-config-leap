@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["prettier", "prettier/react", "prettier/@typescript-eslint"],
+  extends: ["prettier"],
 
   rules: {},
 };

@@ -18,7 +18,7 @@ This rules include typescript rule, so you should specify `parser` and `parserOp
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "leap"
+    "leapfe"
   ],
   "parserOptions": {
     "project": ["./tsconfig.json"]

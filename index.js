@@ -1,7 +1,6 @@
 const extendsRules = [
   "./rules/best-practices",
   "./rules/imports",
-  "./rules/node",
   "./rules/react",
   "./rules/react-hooks",
   "./rules/style",

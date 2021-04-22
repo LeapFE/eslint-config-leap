@@ -4,17 +4,18 @@ const prettier = require("prettier");
 
 const rule = getRuleFinder("./index.js");
 
-// const currentRules = ruleFinder.getCurrentRules();
+const currentRules = rule.getCurrentRules();
 
 const currentRulesDetailed = rule.getCurrentRulesDetailed();
 
-// const pluginRules = ruleFinder.getPluginRules();
+const pluginRules = rule.getPluginRules();
 
-// const allAvailableRules = ruleFinder.getAllAvailableRules();
+const allAvailableRules = rule.getAllAvailableRules();
 
-// const unusedRules = ruleFinder.getUnusedRules();
+const unusedRules = rule.getUnusedRules();
 
-// const deprecatedRules = ruleFinder.getDeprecatedRules();
+const deprecatedRules = rule.getDeprecatedRules();
+// console.log(deprecatedRules);
 
 async function generateAllRules(currentRulesDetailed) {
   const ruleJsonFileName = "./rule.json";

@@ -59,11 +59,6 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
     "@typescript-eslint/ban-types": "error",
 
-    "@typescript-eslint/class-name-casing": ["error", { allowUnderscorePrefix: true }],
-
-    // @deprecated
-    "@typescript-eslint/interface-name-prefix": "off",
-
     // Enforce consistent indentation
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
     "@typescript-eslint/indent": [
@@ -178,5 +173,7 @@ module.exports = {
     // Require or disallow semicolons instead of ASI
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
     "@typescript-eslint/semi": ["error", "always"],
+
+    "@typescript-eslint/no-floating-promises": ["off"]
   },
 };
