@@ -2,21 +2,15 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended"
   ],
 
   rules: {
     // OVERRIDE
-    // ensure imports point to files/modules that can be resolved
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
-    "@typescript-eslint/camelcase": "off",
-
-    // OVERRIDE
     // warn usage of the any type
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md
     "@typescript-eslint/no-explicit-any": [
-      "warn",
+      "error",
       {
         ignoreRestArgs: true,
       },
