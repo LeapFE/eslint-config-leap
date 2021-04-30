@@ -168,6 +168,15 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.md
     "@typescript-eslint/semi": ["error", "always"],
 
-    "@typescript-eslint/no-floating-promises": ["off"]
+    "@typescript-eslint/no-floating-promises": ["off"],
+
+    // Disallow the declaration of empty interfaces
+    // https://github.com/typescript-eslint/typescript-eslint/blob/v4.22.0/packages/eslint-plugin/docs/rules/no-empty-interface.md
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ]
   },
 };
