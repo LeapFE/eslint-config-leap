@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
   ],
 
   rules: {
@@ -62,7 +62,7 @@ module.exports = {
         SwitchCase: 1,
         VariableDeclarator: 1,
         outerIIFEBody: 1,
-        // MemberExpression: null,
+        MemberExpression: "off",
         FunctionDeclaration: {
           parameters: 1,
           body: 1,
@@ -175,8 +175,10 @@ module.exports = {
     "@typescript-eslint/no-empty-interface": [
       "error",
       {
-        "allowSingleExtends": true
-      }
-    ]
+        allowSingleExtends: true,
+      },
+    ],
+
+    "@typescript-eslint/ban-ts-ignore": ["off"],
   },
 };
